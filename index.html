@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TideFit - Exercise Tracker</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-3 mb-4">TideFit - Exercise Tracker</h1>
+        
+        <!-- Exercise list -->
+        <div id="exercise-list">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Activity Type</th>
+                        <th>Distance (miles)</th>
+                        <th>Date Completed</th>
+                        <th></th> <!-- Empty cell for pin and delete buttons -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Running</td>
+                        <td>3.5</td>
+                        <td>2023-10-20</td>
+                        <td>
+                            <button class="btn btn-pin">Pin</button>
+                            <button class="btn btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cycling</td>
+                        <td>12.2</td>
+                        <td>2023-10-18</td>
+                        <td>
+                            <button class="btn btn-pin">Pin</button>
+                            <button class="btn btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- Add more dummy data rows as needed -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Exercise form -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <h2 class="card-title">Add New Exercise</h2>
+                <form id="exercise-form">
+                    <div class="form-group">
+                        <label for="activity-type">Activity Type:</label>
+                        <input type="text" class="form-control" id="activity-type" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="distance">Distance (miles):</label>
+                        <input type="number" class="form-control" id="distance" step="0.1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date-completed">Date Completed:</label>
+                        <input type="date" class="form-control" id="date-completed" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Add Exercise</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js (required for some Bootstrap components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Your custom JavaScript -->
+    <script src="index.js"></script>
+</body>
+</html>
